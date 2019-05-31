@@ -1,7 +1,7 @@
 <% include include/header.html %>
 <div class="container">
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modelImage">
-        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Pull image
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 下载镜像
     </button>
     <hr>
 </div>
@@ -9,10 +9,10 @@
     <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>REPOSITORY</th>
-                <th>TAG</th>
-                <th>Size</th>
-                <th>Action</th>
+                <th>名字</th>
+                <th>版本</th>
+                <th>大小</th>
+                <th>操作</th>
             </tr>
         </thead>
         <tbody>
@@ -31,7 +31,7 @@
                 <td>
                     <a class="btn btn-danger btn-xs" data-loading-text="<i class='fa fa-spinner fa-spin fa-fw' aria-hidden='true'></i> Waiting..."
                         href="/images/remove/<%= image.Id %>">
-                        <span class="glyphicon glyphicon-trash"></span> Remove
+                        <span class="glyphicon glyphicon-trash"></span> 删除
                     </a>
                 </td>
             </tr>
@@ -48,19 +48,19 @@
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
-                <h4 class="modal-title" id="myModalLabel">Pull image</h4>
+                <h4 class="modal-title" id="myModalLabel">下载镜像</h4>
             </div>
             <div class="modal-body">
                 <div class="form-group">
                     <div class="form-inline">
                         <div class="row">
                             <div class="col-md-6">
-                                <label for="imageName">Image name: </label>
+                                <label for="imageName">镜像名称: </label>
                                 <input type="text" class="form-control typeahead" data-provide="typeahead" autocomplete="off"
                                     name="imageName" id="imageName">
                             </div>
                             <div class="col-md-6">
-                                <label for="imageVersionName">Version: </label>
+                                <label for="imageVersionName">版本: </label>
                                 <input type="text" class="form-control typeahead" placeholder="latest" autocomplete="off"
                                     name="imageVersionName" id="imageVersionName">
                             </div>
@@ -72,9 +72,9 @@
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                 <button id="pullImage" type="submit" data-loading-text="<i class='fa fa-spinner fa-spin fa-fw' aria-hidden='true'></i> Waiting..."
-                    class="btn btn-primary">Comfirme</button>
+                    class="btn btn-primary">下载</button>
             </div>
         </div>
     </div>

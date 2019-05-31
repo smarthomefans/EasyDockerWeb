@@ -5,7 +5,7 @@
             <div class="col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">OS</h3>
+                        <h3 class="panel-title">系统</h3>
                     </div>
                     <div class="panel-body">
                         <%= info.OperatingSystem %>
@@ -15,7 +15,7 @@
             <div class="col-md-3">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Docker version</h3>
+                        <h3 class="panel-title">Docker 版本</h3>
                     </div>
                     <div class="panel-body">
                         <%= info.ServerVersion %>
@@ -48,20 +48,20 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="panel panel-success">
-                    <a href="/containers" class="panel-heading panel-title btn btn-success btn-sm" style="width: 100%;">Containers</a>
+                    <a href="/containers" class="panel-heading panel-title btn btn-success btn-sm" style="width: 100%;">容器</a>
                     <div class="panel-body">
                         <div class="col-md-4">
-                            <p class="text-success">Running :
+                            <p class="text-success">运行在 :
                                 <%= info.ContainersRunning %>
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <p class="text-warning">Paused :
+                            <p class="text-warning">暂停 :
                                 <%= info.ContainersPaused %>
                             </p>
                         </div>
                         <div class="col-md-4">
-                            <p class="text-danger">Stopped :
+                            <p class="text-danger">停止 :
                                 <%= info.ContainersStopped %>
                             </p>
                         </div>
@@ -71,7 +71,7 @@
 
             <div class="col-md-6">
                 <div class="panel panel-success">
-                    <a href="/images" class="panel-heading panel-title btn btn-success btn-sm" style="width: 100%;">Images</a>
+                    <a href="/images" class="panel-heading panel-title btn btn-success btn-sm" style="width: 100%;">镜像</a>
                     <div class="panel-body">
                         <p class="text-center">
                             <%= info.Images %>

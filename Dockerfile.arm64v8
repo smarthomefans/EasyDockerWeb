@@ -3,7 +3,7 @@ FROM arm64v8/node:10-alpine
 ADD . /src
 
 RUN apk update && apk add bash && \
-    cd /src; npm install  \
+    cd /src; npm install  &&\
     # Time zone option, if you live in China pleace set it to Asia/Shanghai
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
     
