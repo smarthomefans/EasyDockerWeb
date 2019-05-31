@@ -8,4 +8,4 @@ RUN apk update && apk add bash && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
     
 EXPOSE  3000
-CMD node /src/bin/www
+CMD npm start
