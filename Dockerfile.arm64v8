@@ -1,7 +1,5 @@
 FROM arm64v8/node:10-alpine 
 
-COPY qemu-arm-static /usr/bin
-
 ADD . /src
 
 RUN apk update && apk add bash && \
@@ -10,4 +8,4 @@ RUN apk update && apk add bash && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
     
 EXPOSE  3000
-# CMD node /src/bin/www
+CMD node /src/bin/www
