@@ -1,4 +1,4 @@
-FROM node:9-alpine
+FROM arm64v8/node:10-alpine 
 ADD . /src
 
 RUN apk update && apk add bash && \
