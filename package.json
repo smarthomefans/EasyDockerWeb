@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": " pm2 start ./bin/www && pm2 log",
+    "start": " pm2 start ./bin/www && pm2 log"
   },
   "dependencies": {
     "body-parser": "~1.18.2",
