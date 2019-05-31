@@ -5,8 +5,16 @@ A simple Web Ui for Docker using `xterm.js`, `Node.js` and `Socket.io`
 
 ## Quick start
 
+* n1版本
+
 ```bash
-docker run -it -d -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock qfdk/easydockerweb
+run -it -d -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock smarthomefans/esaydockerweb:arm64v8-latest
+```
+
+* x86版本
+
+```bash
+run -it -d -p 3000:3000 -v /var/run/docker.sock:/var/run/docker.sock smarthomefans/esaydockerweb:latest
 ```
 
 [http://localhost:3000](http://localhost:3000) enjoy ;)
