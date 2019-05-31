@@ -1,4 +1,7 @@
 FROM arm64v8/node:10-alpine 
+
+COPY qemu-arm-static /usr/bin
+
 ADD . /src
 
 RUN apk update && apk add bash && \
