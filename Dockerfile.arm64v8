@@ -8,4 +8,5 @@ RUN apk update && apk add bash && \
     ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
     
 EXPOSE  3000
+WORKDIR /src
 CMD npm start
