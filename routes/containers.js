@@ -122,7 +122,7 @@ const returnContainersRouter = (io) => {
 
     });
 
-    router.get('/console/:id', (req, res, next) => {
+    router.get('/console/:id/:cc', (req, res, next) => {
         res.render('terminal');
     });
 
@@ -131,14 +131,18 @@ const returnContainersRouter = (io) => {
     });
 
     io.on('connection', (socket) => {
-        socket.on('exec', (id, w, h) => {
+        socket.on('exec', (id,cc, w, h) => {
+            let c = 'bash'
+            if (cc !== 'bash') {
+                c = 'sh'
+            }
             const container = docker.getContainer(id);
             let cmd = {
                 'AttachStdout': true,
                 'AttachStderr': true,
                 'AttachStdin': true,
                 'Tty': true,
-                Cmd: ['/bin/bash']
+                Cmd: [`/bin/${c}`]
             };
             socket.on('resize', (data) => {
                 container.resize({h: data.rows, w: data.cols}, () => {

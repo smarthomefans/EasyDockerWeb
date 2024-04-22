@@ -1,7 +1,7 @@
 <%- include('include/header.html') %>
     <div class="col-md-12">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> New container
+            <span class="glyphicon glyphicon-plus" aria-hidden="true"></span> 创建容器
         </button>
         <hr>
     </div>
@@ -12,7 +12,7 @@
                     <tr>
                         <th>名称</th>
                         <th>镜像</th>
-                        <th>命令</th>
+                        <th>启动命令</th>
                         <th>端口</th>
                         <th>状态</th>
                         <th>CPU</th>
@@ -75,8 +75,13 @@
                                             <% } %>
                                                 <a class="btn btn-primary btn-xs"
                                                     data-loading-text="<i class='fa fa-spinner fa-spin fa-fw' aria-hidden='true'></i> Waiting..."
-                                                    href="/containers/console/<%= container.Id %>">
-                                                    <span class="glyphicon glyphicon-console"></span> 控制台
+                                                    href="/containers/console/<%= container.Id %>/bash">
+                                                    <span class="glyphicon glyphicon-console"></span> bash 控制台
+                                                </a>
+                                                <a class="btn btn-primary btn-xs"
+                                                    data-loading-text="<i class='fa fa-spinner fa-spin fa-fw' aria-hidden='true'></i> Waiting..."
+                                                    href="/containers/console/<%= container.Id %>/sh">
+                                                    <span class="glyphicon glyphicon-console"></span> sh 控制台
                                                 </a>
                                                 <% } %>
                                                     <% if(container.State=='exited' ){ %>
@@ -150,7 +155,7 @@
 
                             <div class="col-md-6">
                                 <label>
-                                    <input type="checkbox" name="isAlways" id="isAlways"> Always restart
+                                    <input type="checkbox" name="isAlways" id="isAlways"> 总是重新启动
                                 </label>
                             </div>
                         </div>

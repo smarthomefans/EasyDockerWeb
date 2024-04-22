@@ -71,7 +71,9 @@
                 lineHeight: 16,
             },
         });
-        var id = window.location.pathname.split('/')[3];
+        var params = window.location.pathname.split('/');
+        var id = params[3];
+        var cmd = params[4]
         var host = window.location.origin;
         var socket = io.connect(host);
 
